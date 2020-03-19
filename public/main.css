@@ -16,29 +16,36 @@
 html { height: 100%; }
 
 body {
-    align-items: flex-start;
 	color: #333;
-    display: flex;
-	flex-direction: column;
 	-webkit-font-smoothing: subpixel-antialiased;
 	font-variant-numeric: lining-nums;
+	font: 16px/1 Georgia, serif;
     margin: 0 auto;
-    max-width: calc(1280px + 48px);
     min-height: 100%;
-	align-items: center;
-    padding: 0 24px;
-    width: 100%;
+	overflow: hidden;
 }
 
-header h1 {
+.wrap {
+	align-items: center;
+    display: flex;
+	flex-direction: column;
+    max-width: calc(1280px + 48px);
+	padding: 0 24px;
+	width: 100%;
+}
+
+h1 {
 	font: 36px/1 "Alegreya", Georgia;
 	font-variant-ligatures: discretionary-ligatures;
 	font-style: oblique;
+	text-align: center;
 }
 
 .table {
+	background-color: #fff2bd;
     border: 1px solid #7a7a7a;
     display: flex;
+	margin: 0 96px;
 }
 
 .col {
@@ -51,10 +58,16 @@ header h1 {
 }
 
 .col > div {
-    padding: 4px;
+	line-height: 36px;
+    padding: 0 4px;
 }
 
-.col > div:not(:last-child){
+.col > div:nth-child(2n){
+	background-color: cornsilk;
+}
+
+.col > div:not(:last-child),
+.last {
     border-bottom: 1px solid #7a7a7a;
 }
 
@@ -64,6 +77,10 @@ header h1 {
 
 .signatures {
     width: 196px;
+}
+
+.signatures:last-child {
+	flex: 1 0 auto;
 }
 
 .title {
