@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'Alegreya';
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+	src: local('Alegreya Regular'), url('./alegreya-regular.ttf') format('truetype');
+}
+
+/* Generic */
+* {
+    box-sizing: border-box;
+}
+
+html { height: 100%; }
+
+body {
+    align-items: flex-start;
+	color: #333;
+    display: flex;
+	flex-direction: column;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-variant-numeric: lining-nums;
+    margin: 0 auto;
+    max-width: calc(1280px + 48px);
+    min-height: 100%;
+	align-items: center;
+    padding: 0 24px;
+    width: 100%;
+}
+
+header h1 {
+	font: 36px/1 "Alegreya", Georgia;
+	font-variant-ligatures: discretionary-ligatures;
+	font-style: oblique;
+}
+
+.table {
+    border: 1px solid #7a7a7a;
+    display: flex;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.col:not(:last-child) {
+	border-right: 1px solid #7a7a7a;
+}
+
+.col > div {
+    padding: 4px;
+}
+
+.col > div:not(:last-child){
+    border-bottom: 1px solid #7a7a7a;
+}
+
+.names {
+	text-transform: capitalize;
+}
+
+.signatures {
+    width: 196px;
+}
+
+.title {
+    text-align: center;
+}
